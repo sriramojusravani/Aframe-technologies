@@ -1,0 +1,122 @@
+ 
+
+ body{
+    font-family:'poppins',sans-serif;
+    background-color:white;
+    display:flex;
+    justify-self: center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    }
+    .display label{
+        display: block;
+        font-size: 14px;
+        color:white;
+        margin-bottom: 5px;
+    }
+    /*Ensure placeholder text is visible*/
+    #display::placeholder{
+        color:#fff;
+    }
+.calculator{
+    background-color: blueviolet;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.56 ease-in-out;
+
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#display{
+    width: 100%;
+    height:50px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    padding:10px;
+    border:none;
+    background-color: cornflowerblue;
+    color: #fff;
+    text-align: right;
+    border-radius: 5px;
+    animation: sildeIn 0.5 ease-in-out;
+}
+
+@keyframes sildeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.button{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap:10px;
+     animation: slideUP 0.5s ease-in-out;
+
+}
+@keyframes sildeUP{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+button{
+    width:60px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: scaleUp 0.5s ease-in-out;
+}
+@keyframes scaleUp{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+button:hover{
+    filter: brightness(110%);
+
+}
+.operator{
+    background-color:cyan;
+    color:aliceblue;
+}
+.clear{
+    background:orangered;
+    color:#fff;
+}
+  .equal{
+    background-color:green;
+    color: #fff;
+
+  }
+  .number{
+    background-color: #95a5a6;
+    color:#fff;
+  }
